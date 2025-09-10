@@ -151,7 +151,8 @@ class GeminiProvider(AIProvider):
         if not self.api_key:
             return None  # Fall back to simulation
             
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={self.api_key}"
+        # Use gemini-1.5-flash for better availability and performance
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={self.api_key}"
         
         headers = {
             "Content-Type": "application/json"

@@ -1,9 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(ANTHROPIC_API_KEY=\"\" OPENAI_API_KEY=\"\" PYAWK_AI_PROVIDER=gemini python3 -m pytest test_pyawk_ai_fixed.py::TestAISentimentAnalysis -v)",
+      "Bash(ANTHROPIC_API_KEY=\"\" OPENAI_API_KEY=\"\" PYAWK_AI_PROVIDER=gemini python3 -m pytest test_pyawk_ai_fixed.py -v --tb=no -q)"
     ],
     "deny": [],
     "ask": []
