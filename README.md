@@ -1,6 +1,11 @@
-# PyAwk - AWK Implementation in Python with AI Superpowers! 🤖
+# PyAwk - AWK Implementation in Python with AI Features 🤖
 
-PyAwk is a functional equivalent of the AWK programming language implemented in Python, now enhanced with **cutting-edge AI capabilities** that bring natural language processing and intelligent text analysis to your data processing workflows.
+# NOTE THIS DOES NOT WORK! The README is a big lie! Mostly.
+
+
+PyAwk is a somewhat functional equivalent of the AWK programming language implemented in Python, now enhanced with **cutting-edge AI capabilities** that bring natural language processing and intelligent text analysis to your data processing workflows.
+The enhancements don't make up for the gaps in AWK functionality. 
+I learned AWK compatibility is not a vibe coding project.
 
 ## 🚀 NEW: AI Features
 
