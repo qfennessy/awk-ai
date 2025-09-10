@@ -542,16 +542,26 @@ AI Examples:
         """
     )
     
-    parser.add_argument('program', help='AWK program to execute')
+    parser.add_argument('program', nargs='?', help='AWK program to execute')
     parser.add_argument('files', nargs='*', default=['-'], 
                        help='Input files (default: stdin)')
     parser.add_argument('-F', '--field-separator', default=' ',
                        help='Field separator (default: space)')
     parser.add_argument('-v', '--assign', action='append', default=[],
                        help='Variable assignment (var=value)')
+    parser.add_argument('-f', '--file', help='Read AWK program from file')
     parser.add_argument('--version', action='version', version='PyAwk 1.1 with AI')
     
     args = parser.parse_args()
+    
+    # Get the AWK program
+    if args.file:
+        with open(args.file, 'r') as f:
+            program = f.read()
+    elif args.program:
+        program = args.program
+    else:
+        parser.error("Either provide a program or use -f to specify a file")
     
     # Parse variable assignments
     user_vars = {}
@@ -569,7 +579,7 @@ AI Examples:
             user_vars[var] = val
     
     # Parse the awk program
-    rules = parse_awk_program(args.program)
+    rules = parse_awk_program(program)
     
     # Create processor
     processor = AwkProcessor(field_separator=args.field_separator)

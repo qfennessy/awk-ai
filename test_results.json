@@ -1,0 +1,165 @@
+{
+  "summary": {
+    "total": 14,
+    "passed": 3,
+    "failed": 11,
+    "skipped": 0,
+    "pass_rate": "21.4%"
+  },
+  "results": [
+    {
+      "name": "addcomma",
+      "passed": false,
+      "expected": "0                            0.00\n-1                          -1.00\n-12.34                     -12.34\n12345                   12,345.00\n-1234567.89         -1,234,567.89\n-123.                     -123.00\n-123456               -123,456.00\n",
+      "actual": "",
+      "stderr": "",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    },
+    {
+      "name": "argtest",
+      "passed": false,
+      "expected": "ARGV[0] = gawk\nARGV[1] = -x\nARGV[2] = -y\nARGV[3] = abc\n",
+      "actual": "ARGV[0] = %-",
+      "stderr": "",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    },
+    {
+      "name": "aasort",
+      "passed": false,
+      "expected": "b[0][1] = \"Alligator\"\nb[0][2] = \"Iguana\"\nb[0][3] = \"Nouns\"\nb[0][4] = \"aardvark\"\nb[0][5] = \"animal\"\nb[0][6] = \"people\"\nb[0][7] = \"zebra\"\nb[0][8] = \"zoo\"\n============\nb[1][1] = \"aardvark\"\nb[1][2] = \"Alligator\"\nb[1][3] = \"animal\"\nb[1][4] = \"Iguana\"\nb[1][5] = \"Nouns\"\nb[1][6] = \"people\"\nb[1][7] = \"zebra\"\nb[1][8] = \"zoo\"\n============\nb[2][1] = \"aardvark\"\nb[2][2] = \"Alligator\"\nb[2][3] = \"animal\"\nb[2][4] = \"Iguana\"\nb[2][5] = \"Nouns\"\nb[2][6] = \"people\"\nb[2][7] = \"zebra\"\nb[2][8] = \"zoo\"\n",
+      "actual": "",
+      "stderr": "Error executing action 'for (IGNORECASE = 0; IGNORECASE < 2; IGNORECASE++)...': name 'init' is not defined\n",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    },
+    {
+      "name": "aasorti",
+      "passed": false,
+      "expected": "b[0][1] = \"Alligator\"\nb[0][2] = \"Iguana\"\nb[0][3] = \"Nouns\"\nb[0][4] = \"aardvark\"\nb[0][5] = \"animal\"\nb[0][6] = \"people\"\nb[0][7] = \"zebra\"\nb[0][8] = \"zoo\"\n============\nb[1][1] = \"aardvark\"\nb[1][2] = \"Alligator\"\nb[1][3] = \"animal\"\nb[1][4] = \"Iguana\"\nb[1][5] = \"Nouns\"\nb[1][6] = \"people\"\nb[1][7] = \"zebra\"\nb[1][8] = \"zoo\"\n============\nb[1] = \"0\"\nb[2] = \"1\"\n",
+      "actual": "",
+      "stderr": "Error executing action 'for (IGNORECASE = 0; IGNORECASE < 2; IGNORECASE++)...': name 'init' is not defined\n",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    },
+    {
+      "name": "concat1",
+      "passed": false,
+      "expected": "Input = A ; \nInput = B ; \nInput = C ; \nInput = D ; \n",
+      "actual": "",
+      "stderr": "",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    },
+    {
+      "name": "substr",
+      "passed": true,
+      "expected": "A                                      \nab\nbc\nab\n\n\nab\n\nef\n\n",
+      "actual": "A                                      \nab\nbc\nab\n\n\nab\n\nef\n\n",
+      "stderr": "",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    },
+    {
+      "name": "math",
+      "passed": false,
+      "expected": "cos(0.785398) = 0.707107\nsin(0.785398) = 0.707107\ne = 2.718282\nlog(e) = 1.000000\nsqrt(pi ^ 2) = 3.141593\natan2(1, 1) = 0.785398\n",
+      "actual": "",
+      "stderr": "Error executing action 'pi = 3.1415927\n\tprintf \"cos(%f) = %f\\n\", pi/4, cos...': invalid syntax (<string>, line 2)\n",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    },
+    {
+      "name": "forsimp",
+      "passed": false,
+      "expected": "9\n",
+      "actual": "",
+      "stderr": "Error executing action 'for (print 9; 0;);...': Missing parentheses in call to 'print'. Did you mean print(...)? (<string>, line 1)\n",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    },
+    {
+      "name": "nfloop",
+      "passed": false,
+      "expected": "aaa _ _ _ _ _ _ _ _ _\n",
+      "actual": "",
+      "stderr": "Error executing action '$0 = \"aaa\"\n\tNF = 10\n\tfor (j = 2; j <= NF; ++j) {\n\t...': cannot assign to function call here. Maybe you meant '==' instead of '='? (<string>, line 1)\n",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    },
+    {
+      "name": "arrayind1",
+      "passed": false,
+      "expected": "               1               0               0  00000757740011               0               0               0\n               2               0               0      1975su1du1               0               0               0\n               3               2               2  00000779770060      1975su1du1      1975su1du1               1\n               4               3               1  64000757790003  00000779770060  00000757740011               2\n",
+      "actual": "",
+      "stderr": "Error executing action 'pos[0]=0 # actual position in the original data fi...': name 'pos' is not defined\nError executing action '#printf(\"%10s%10s\\n\",NR,\"animals\") > \"/dev/stderr\"...': invalid syntax (<string>, line 1)\n",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    },
+    {
+      "name": "delarprm",
+      "passed": true,
+      "expected": "",
+      "actual": "",
+      "stderr": "Error executing action 'foo()...': name 'foo' is not defined\n",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    },
+    {
+      "name": "functab1",
+      "passed": false,
+      "expected": "gawk: functab1.awk:3: fatal: `delete' is not allowed with FUNCTAB\nEXIT CODE: 2\n",
+      "actual": "",
+      "stderr": "Error executing action 'delete FUNCTAB...': invalid syntax (<string>, line 1)\n",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    },
+    {
+      "name": "fieldassign",
+      "passed": false,
+      "expected": "@@@\n@@@\n",
+      "actual": "",
+      "stderr": "Error evaluating condition 'gsub(/./, \"@\") && $0 = $1...': invalid syntax (<string>, line 1)\nError evaluating condition 'gsub(/./, \"@\") && $0 = $1...': invalid syntax (<string>, line 1)\n",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    },
+    {
+      "name": "nfldstr",
+      "passed": true,
+      "expected": "",
+      "actual": "",
+      "stderr": "",
+      "returncode": 0,
+      "skipped": false,
+      "skip_reason": "",
+      "error": ""
+    }
+  ]
+}

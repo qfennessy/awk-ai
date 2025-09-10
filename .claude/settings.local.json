@@ -1,8 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ANTHROPIC_API_KEY=\"\" OPENAI_API_KEY=\"\" PYAWK_AI_PROVIDER=gemini python3 -m pytest test_pyawk_ai_fixed.py::TestAISentimentAnalysis -v)",
-      "Bash(ANTHROPIC_API_KEY=\"\" OPENAI_API_KEY=\"\" PYAWK_AI_PROVIDER=gemini python3 -m pytest test_pyawk_ai_fixed.py -v --tb=no -q)"
+      "Bash(PYAWK_AI_PROVIDER=anthropic python3 -m pytest test_pyawk_ai.py -q --tb=no)"
     ],
     "deny": [],
     "ask": []
